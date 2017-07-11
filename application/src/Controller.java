@@ -16,9 +16,9 @@ public class Controller extends JFrame
 	private View _view;
 	
 	private JTextField inputTextField;
-	private String VIEW_BUTTON_ACTION_COMMAND = "View Known Spells";
-	private String ADD_BUTTON_ACTION_COMMAND = "Add Spell";
-	private String REMOVE_BUTTON_ACTION_COMMAND = "Remove Spell";
+	private final String VIEW_BUTTON_ACTION_COMMAND = "View Known Spells";
+	private final String ADD_BUTTON_ACTION_COMMAND = "Add Spell";
+	private final String REMOVE_BUTTON_ACTION_COMMAND = "Remove Spell";
 	
 	public Controller(Database context)
 	{
@@ -71,9 +71,9 @@ public class Controller extends JFrame
 					{
 						return;
 					}
-
+					
 					Model spellModel = new Model(_context);
-					spellModel.spellName = spellName;
+					spellModel.spellName = spellName.trim();
 						
 					if (buttonLabel.equals(ADD_BUTTON_ACTION_COMMAND))
 					{

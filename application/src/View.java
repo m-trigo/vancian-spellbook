@@ -29,8 +29,7 @@ public class View extends JFrame
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);		
 		this.setSize(windowWidth, WINDOW_HEIGHT);
 		
-		JPanel displayPanel = new JPanel();
-		displayPanel.setLayout(new BorderLayout()); // The layout will force the JList to fill the JPanel
+		JPanel displayPanel = new JPanel(new BorderLayout());  // The layout will force the JList to fill the panel
 		
 		spellList = new JList<String>(arrayOfSpellNames);
 		spellList.setBackground(JLIST_BACKGROUND_COLOR);
